@@ -1,0 +1,147 @@
+html {
+	scroll-behavior: smooth;
+}
+.title-cat {
+	font-weight: 600;
+	padding: 20px 0;
+}
+.btn-gold {
+	background-color: #f9de6d;
+}
+
+/* css for table in card */
+.no-padding {
+	padding: 0;
+}
+.space-td {
+	width: 10px;
+}
+
+/* css card */
+.card-body {
+	background-color: #6b6b6f;
+}
+.m-0 a {
+	color: #f9de6d;
+	text-decoration: none;
+}
+.m-0 a:hover {
+	color: #cfbd74;
+}
+.card.card-height {
+	height: 223px;
+}
+
+/* css for header */
+.max-width-header {
+	padding: 19px 5%;
+}
+.space {
+	width: 100%;
+}
+.navbar-brand {
+	font-size: 30px;
+	font-weight: 600;
+}
+.navbar-dark .navbar-brand {
+	color: #f9de6d;
+}
+.nav-item {
+	font-weight: 600;
+}
+.navbar-dark .navbar-nav .nav-link {
+	color: #f9de6d;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #ffffff;
+}
+.fixed {
+	position: fixed;
+	z-index: 20;
+}
+
+/* css for article or main */
+.gold {
+	color: #f9de6d;
+}
+.content {
+	font-size: larger;
+}
+
+/* css for footer */
+.content-footer {
+	color: #f9de6d;
+}
+.putih {
+	color: #ffffff;
+}
+.putih:hover {
+	color: rgb(240, 240, 231);
+}
+.title-content {
+	font-weight: 700;
+}
+
+/* css for slider  */
+.carousel-caption {
+	bottom: 200px;
+}
+.carousel-caption.d-none.d-md-block h2 {
+	color: rgb(240, 240, 231);
+	font-weight: bold;
+}
+
+/* css for sidebar */
+.sidebar {
+	min-height: 100vh;
+	background-color: #e4e4e4;
+	float: left;
+	width: 0;
+	transition: width 0.7s;
+	transition-timing-function: ease;
+}
+.sidebar .menu {
+	display: none;
+}
+.sidebar .title-menu {
+	background-color: #f9de6d;
+	padding: 24px 30px;
+}
+.sidebar .title-menu h3 {
+	font-weight: 600;
+}
+.sidebar .menu .link-sidebar {
+	display: none;
+	text-decoration: none;
+	color: black;
+	padding: 10px 30px;
+}
+.sidebar .menu .link-sidebar:hover {
+	display: none;
+	text-decoration: none;
+	color: gold;
+	padding: 10px 30px;
+	background-color: gray;
+}
+
+/* css for konten table */
+.konten-table {
+	border-top: 7px solid #cfbd74;
+	border-radius: 7px;
+}
+.title-table {
+	font-weight: 600;
+}
+
+/* css responsive */
+@media (max-width: 991.98px) {
+	.content-footer {
+		font-size: 15px;
+	}
+	.navbar-brand {
+		font-size: 20px;
+	}
+	.content {
+		font-size: 16px;
+	}
+}
