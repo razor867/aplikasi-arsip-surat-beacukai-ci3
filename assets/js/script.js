@@ -6,33 +6,36 @@ var asalTujuan = document.getElementsByClassName("asal-tujuan");
 var form = document.getElementById("form-modal");
 var tableData;
 
-info.style.display = "none";
-
 if (judulTabel.textContent == "Daftar Pengguna") {
 	tableData = "login";
-} else if (judulTabel.textContent == "Daftar Surat Masuk") {
-	tableData = "surat_masuk";
-	asalTujuan[0].innerHTML = "Asal";
-	asalTujuan[1].innerHTML = "Asal";
-} else if (judulTabel.textContent == "Daftar Surat Keluar") {
-	tableData = "surat_keluar";
-	asalTujuan[0].innerHTML = "Tujuan";
-	asalTujuan[1].innerHTML = "Tujuan";
-} else if (judulTabel.textContent == "Daftar ND Masuk") {
-	tableData = "nd_masuk";
-	asalTujuan[0].innerHTML = "Asal";
-	asalTujuan[1].innerHTML = "Asal";
 } else {
-	tableData = "nd_keluar";
-	asalTujuan[0].innerHTML = "Tujuan";
-	asalTujuan[1].innerHTML = "Tujuan";
+	info.style.display = "none";
+	if (judulTabel.textContent == "Daftar Surat Masuk") {
+		tableData = "surat_masuk";
+		asalTujuan[0].innerHTML = "Asal";
+		asalTujuan[1].innerHTML = "Asal";
+	} else if (judulTabel.textContent == "Daftar Surat Keluar") {
+		tableData = "surat_keluar";
+		asalTujuan[0].innerHTML = "Tujuan";
+		asalTujuan[1].innerHTML = "Tujuan";
+	} else if (judulTabel.textContent == "Daftar ND Masuk") {
+		tableData = "nd_masuk";
+		asalTujuan[0].innerHTML = "Asal";
+		asalTujuan[1].innerHTML = "Asal";
+	} else {
+		tableData = "nd_keluar";
+		asalTujuan[0].innerHTML = "Tujuan";
+		asalTujuan[1].innerHTML = "Tujuan";
+	}
 }
 
 function tambah() {
 	modalTitle.innerHTML = "Tambah Data";
 	form.action = "http://localhost/beacukai/akun/tambah/" + tableData;
 	btnAction.innerHTML = "Simpan";
-	info.style.display = "none";
+	if (!tableData == "login") {
+		info.style.display = "none";
+	}
 
 	if (tableData == "login") {
 		$("#username").val("");
