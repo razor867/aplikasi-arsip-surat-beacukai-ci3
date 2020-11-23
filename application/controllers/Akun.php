@@ -14,28 +14,29 @@ class Akun extends CI_Controller
 
         $this->load->model('m_data');
 
-
         function cekInput($data, $table, $info = '')
         {
             $pattern = '/^[a-zA-Z0-9 ]*$/'; //pattern untuk username (hanya huruf, spasi, dan angka)
             $pattern2 = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/'; //for pass
+            // $pattern3 = '/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/'; //for date
+            $pattern3 = '/^[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}$/'; //for date yyyy-mm-dd
 
             if (empty($data)) {
                 die(showError('kosong', $table));
             }
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
 
-            if ($info == 'tanggal') {
-            } else {
-                $data = stripslashes($data);
-                $data = htmlspecialchars($data);
-            }
-
-            if ($info == 'pass') {
+            if ($info == 'pass') { //validasi password beres
                 if (!preg_match($pattern2, $data)) {
                     die(showError('gagal', $table));
                 }
-            } elseif ($table == '') {
-                if (!preg_match($pattern, $data)) {
+            } elseif ($info == 'tanggal') { //validasi tanggal beres
+                if (!preg_match($pattern3, $data)) {
+                    die(showError('gagal', $table));
+                }
+            } else {
+                if (!preg_match($pattern, $data)) { //validasi selain password beres
                     die(showError('gagal', $table));
                 }
             }
@@ -147,7 +148,7 @@ class Akun extends CI_Controller
             if (isset($_POST['submit'])) {
                 $dataInput = array(
                     'nomor_srt'     => cekInput($this->input->post('nosurat'), $table),
-                    'tanggal'       => cekInput($this->input->post('tanggal'), $table, 'tanggal'),
+                    'tanggal'       => cekInput($this->input->post('tanggal'), $table, 'tanggal'), //wajib divalidasi
                     'agenda'        => cekInput($this->input->post('agenda'), $table),
                     $asalTujuan     => cekInput($this->input->post('asaltujuan'), $table),
                     'perihal'       => cekInput($this->input->post('perihal'), $table),
