@@ -26,6 +26,7 @@
 <script src="<?= base_url('assets/js/jquery-3.5.1.min.js') ?>"></script>
 <script src="<?= base_url('assets/js/bootstrap.js') ?>"></script>
 <script src="<?= base_url('assets/js/scrolltop.js') ?>"></script>
+<script src="<?= base_url('assets/js/sweetalert2.all.min.js') ?>"></script>
 <script src="<?= base_url('assets/js/script.js') ?>"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="<?= base_url('assets/js/sidebar.js') ?>"></script>

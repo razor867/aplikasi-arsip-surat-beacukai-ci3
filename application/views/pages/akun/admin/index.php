@@ -1,8 +1,9 @@
+<div id="flash" data-flashData="<?= $flashdata ?>"></div>
 <article style="height: 100vh;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="konten-table bg-light p-5 mt-4">
+                <div class="table-responsive konten-table bg-light p-5 mt-4">
                     <h4 class="text-center title-table"><?= $title_table ?></h4>
                     <table class="table table-hover table-striped table-bordered .table-responsive data">
                         <thead class="bg-warning">
