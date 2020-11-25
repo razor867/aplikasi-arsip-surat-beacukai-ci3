@@ -13,7 +13,6 @@ class Akun extends CI_Controller
         }
 
         $this->load->model('m_data');
-        $this->infopesan = '';
     }
 
     public function index($tipe = 'suratmasuk')
@@ -142,17 +141,17 @@ class Akun extends CI_Controller
             }
             //validasi input file
             if (!empty($_FILES['filesurat']['name'])) {
-                //hapus filenya dulu
-                $dataFile = './uploads/' . $table . '/' . $this->input->post('info');
-                if (!unlink($dataFile)) {
-                    die($this->showError('gagal upload', $table));
-                }
                 //upload file yg baru
                 $cek = $this->uploadFile('filesurat', $table);
                 if ($cek == 'gagal upload') {
                     die($this->showError($cek, $table));
                 } else {
                     $dataInput['nama_file_srt'] = $cek;
+                }
+                //hapus filenya dulu
+                $dataFile = './uploads/' . $table . '/' . $this->input->post('info');
+                if (!unlink($dataFile)) {
+                    die($this->showError('gagal upload', $table));
                 }
             }
         }

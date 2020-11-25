@@ -32,7 +32,9 @@
             </form>
         </div>
     </div>
+    <div id="flash" data-flashData="<?= $flashdata ?>"></div>
     <script src="<?= base_url('assets/js/jquery-3.5.1.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/sweetalert2.all.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/login.js') ?>"></script>
 </body>
 

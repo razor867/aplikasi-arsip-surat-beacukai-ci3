@@ -48,10 +48,12 @@
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input class="form-control" type="text" name="username" id="username" required autocomplete="off" placeholder="Username">
+                        <span class="text-secondary"><i>(Tidak boleh lebih dari 20 karakter)</i></span>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input class="form-control" type="password" name="password" id="password" required autocomplete="off" placeholder="Password">
+                        <span class="text-secondary"><i>(Password minimal 8 karakter max 15 karakter dan harus mengandung huruf besar dan kecil disertai angka)</i></span>
                     </div>
                     <div class="form-group">
                         <label for="departemen">Departemen</label>

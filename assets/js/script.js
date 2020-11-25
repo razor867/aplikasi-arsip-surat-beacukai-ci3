@@ -116,9 +116,28 @@ function hapus(idData) {
 	});
 }
 
+function iconAksi(data) {
+	var patt = [/berhasil/i, /gagal/i, /tidak/i]; //pattern regex
+	var resultIcon, result;
+	for (let i = 0; i < patt.length; i++) {
+		result = data.match(patt[i]); //pencocokkan
+		if (result != "") {
+			break;
+		}
+	}
+	if (result == "berhasil") {
+		resultIcon = "success";
+	} else if (result == "gagal") {
+		resultIcon = "error";
+	} else {
+		resultIcon = "info";
+	}
+	return resultIcon;
+}
+
 if (flashData) {
 	Swal.fire({
-		icon: "success",
+		icon: iconAksi(flashData),
 		title: flashData,
 		confirmButtonText: `Ok`,
 	});
