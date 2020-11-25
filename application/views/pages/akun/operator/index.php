@@ -14,7 +14,7 @@
                                 <th class="asal-tujuan"></th>
                                 <th>Perihal</th>
                                 <th>File Surat</th>
-                                <th class="text-center"><a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" onclick="tambah()">Tambah User</a></th>
+                                <th class="text-center"><a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" onclick="tambah()"><i class="fas fa-plus-circle fa-fw"></i>&nbsp;Tambah User</a></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,11 +36,11 @@
                                     </td>
                                     <td><?= $d->perihal ?></td>
                                     <td class="text-center">
-                                        <a href="<?= base_url('uploads/' . $folder . '/' . $d->nama_file_srt) ?>" class="btn btn-info" target="blank">File</a>
+                                        <a href="<?= base_url('uploads/' . $folder . '/' . $d->nama_file_srt) ?>" class="btn btn-info" target="blank"><i class="fa fa-file-pdf fa-fw"></i>&nbsp;File</a>
                                     </td>
                                     <td class="text-center">
-                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="edit(<?= $d->id ?>)">Edit</a> |
-                                        <a href="#" class="btn btn-danger" onclick="hapus(<?= $d->id ?>)">Hapus</a>
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="edit(<?= $d->id ?>)"><i class="fas fa-edit fa-fw"></i>&nbsp;Edit</a> |
+                                        <a href="#" class="btn btn-danger" onclick="hapus(<?= $d->id ?>)"><i class="fa fa-trash-alt fa-fw"></i>&nbsp;Hapus</a>
                                     </td>
                                 </tr>
                             <?php } ?>

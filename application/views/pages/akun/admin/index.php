@@ -10,7 +10,7 @@
                             <tr>
                                 <th>Username</th>
                                 <th>Departemen</th>
-                                <th class="text-center"><a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" onclick="tambah()">Tambah User</a></th>
+                                <th class="text-center"><a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" onclick="tambah()"><i class="fa fa-plus-circle fa-fw"></i>&nbsp;Tambah User</a></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -21,8 +21,8 @@
                                     <td><?= $d->user ?></td>
                                     <td><?= $d->cat ?></td>
                                     <td class="text-center">
-                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="edit('<?= $d->id ?>')">Edit</a> |
-                                        <a href="#" class="btn btn-danger" onclick="hapus('<?= $d->id ?>')">Hapus</a>
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="edit('<?= $d->id ?>')"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit</a> |
+                                        <a href="#" class="btn btn-danger" onclick="hapus('<?= $d->id ?>')"><i class="fa fa-trash-alt fa-fw"></i>&nbsp;Hapus</a>
                                     </td>
                                 </tr>
                             <?php } ?>
