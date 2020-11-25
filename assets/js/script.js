@@ -5,6 +5,7 @@ var info = document.getElementsByClassName("info")[0];
 var asalTujuan = document.getElementsByClassName("asal-tujuan");
 var form = document.getElementById("form-modal");
 var tableData;
+var flashData = document.getElementById("flash").getAttribute("data-flashData");
 
 if (judulTabel.textContent == "Daftar Pengguna") {
 	tableData = "login";
@@ -94,9 +95,31 @@ function edit(idData) {
 }
 
 function hapus(idData) {
-	var a = confirm("Yakin hapus data ini?");
-	if (a == true) {
-		window.location.href =
-			"http://localhost/beacukai/akun/hapus/" + idData + "/" + tableData;
-	}
+	// var a = confirm("Yakin hapus data ini?");
+	// if (a == true) {
+	// 	window.location.href =
+	// 		"http://localhost/beacukai/akun/hapus/" + idData + "/" + tableData;
+	// }
+	Swal.fire({
+		title: "Yakin hapus data ini?",
+		text: "kamu akan kehilangan data ini di server!",
+		icon: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#3085d6",
+		cancelButtonColor: "#d33",
+		confirmButtonText: "Hapus",
+	}).then((result) => {
+		if (result.isConfirmed) {
+			window.location.href =
+				"http://localhost/beacukai/akun/hapus/" + idData + "/" + tableData;
+		}
+	});
+}
+
+if (flashData) {
+	Swal.fire({
+		icon: "success",
+		title: flashData,
+		confirmButtonText: `Ok`,
+	});
 }
