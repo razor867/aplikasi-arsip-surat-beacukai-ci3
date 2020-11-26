@@ -14,7 +14,7 @@
                                 <th class="asal-tujuan"></th>
                                 <th>Perihal</th>
                                 <th>File Surat</th>
-                                <th class="text-center"><a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" onclick="tambah()"><i class="fas fa-plus-circle fa-fw"></i>&nbsp;Tambah User</a></th>
+                                <th class="text-center"><a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" onclick="tambah()"><i class="fas fa-plus-circle fa-fw"></i>&nbsp;Tambah Data</a></th>
                             </tr>
                         </thead>
                         <tbody>
