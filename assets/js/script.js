@@ -1,144 +1,192 @@
-var btnAction = document.getElementsByClassName("btn-primary")[0];
-var modalTitle = document.getElementsByClassName("modal-title")[0];
-var judulTabel = document.getElementsByClassName("title-table")[0];
-var info = document.getElementsByClassName("info")[0];
-var asalTujuan = document.getElementsByClassName("asal-tujuan");
-var form = document.getElementById("form-modal");
-var tableData;
-var flashData = document.getElementById("flash").getAttribute("data-flashData");
-
-if (judulTabel.textContent == "Daftar Pengguna") {
-	tableData = "login";
-} else {
-	info.style.display = "none";
-	if (judulTabel.textContent == "Daftar Surat Masuk") {
-		tableData = "surat_masuk";
-		asalTujuan[0].innerHTML = "Asal";
-		asalTujuan[1].innerHTML = "Asal";
-	} else if (judulTabel.textContent == "Daftar Surat Keluar") {
-		tableData = "surat_keluar";
-		asalTujuan[0].innerHTML = "Tujuan";
-		asalTujuan[1].innerHTML = "Tujuan";
-	} else if (judulTabel.textContent == "Daftar ND Masuk") {
-		tableData = "nd_masuk";
-		asalTujuan[0].innerHTML = "Asal";
-		asalTujuan[1].innerHTML = "Asal";
-	} else {
-		tableData = "nd_keluar";
-		asalTujuan[0].innerHTML = "Tujuan";
-		asalTujuan[1].innerHTML = "Tujuan";
-	}
-}
-
+var _0xf943 = [
+	"\x62\x74\x6E\x2D\x70\x72\x69\x6D\x61\x72\x79",
+	"\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x43\x6C\x61\x73\x73\x4E\x61\x6D\x65",
+	"\x6D\x6F\x64\x61\x6C\x2D\x74\x69\x74\x6C\x65",
+	"\x74\x69\x74\x6C\x65\x2D\x74\x61\x62\x6C\x65",
+	"\x69\x6E\x66\x6F",
+	"\x61\x73\x61\x6C\x2D\x74\x75\x6A\x75\x61\x6E",
+	"\x66\x6F\x72\x6D\x2D\x6D\x6F\x64\x61\x6C",
+	"\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64",
+	"\x64\x61\x74\x61\x2D\x66\x6C\x61\x73\x68\x44\x61\x74\x61",
+	"\x67\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65",
+	"\x66\x6C\x61\x73\x68",
+	"\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C",
+	"\x54\x61\x6D\x62\x61\x68\x20\x44\x61\x74\x61",
+	"\x61\x63\x74\x69\x6F\x6E",
+	"\x68\x74\x74\x70\x3A\x2F\x2F\x6C\x6F\x63\x61\x6C\x68\x6F\x73\x74\x2F\x62\x65\x61\x63\x75\x6B\x61\x69\x2F\x61\x6B\x75\x6E\x2F\x74\x61\x6D\x62\x61\x68\x2F",
+	"\x53\x69\x6D\x70\x61\x6E",
+	"\x6C\x6F\x67\x69\x6E",
+	"\x64\x69\x73\x70\x6C\x61\x79",
+	"\x73\x74\x79\x6C\x65",
+	"\x6E\x6F\x6E\x65",
+	"",
+	"\x76\x61\x6C",
+	"\x23\x75\x73\x65\x72\x6E\x61\x6D\x65",
+	"\x23\x70\x61\x73\x73\x77\x6F\x72\x64",
+	"\x23\x64\x65\x70\x61\x72\x74\x65\x6D\x65\x6E",
+	"\x23\x6E\x6F\x73\x75\x72\x61\x74",
+	"\x23\x74\x61\x6E\x67\x67\x61\x6C",
+	"\x23\x61\x67\x65\x6E\x64\x61",
+	"\x23\x61\x73\x61\x6C\x74\x75\x6A\x75\x61\x6E",
+	"\x23\x70\x65\x72\x69\x68\x61\x6C",
+	"\x72\x65\x71\x75\x69\x72\x65\x64",
+	"\x70\x72\x6F\x70",
+	"\x23\x66\x69\x6C\x65\x73\x75\x72\x61\x74",
+	"\x23\x69\x6E\x66\x6F",
+	"\x45\x64\x69\x74\x20\x44\x61\x74\x61",
+	"\x68\x74\x74\x70\x3A\x2F\x2F\x6C\x6F\x63\x61\x6C\x68\x6F\x73\x74\x2F\x62\x65\x61\x63\x75\x6B\x61\x69\x2F\x61\x6B\x75\x6E\x2F\x65\x64\x69\x74\x2F",
+	"\x2F",
+	"\x52\x75\x62\x61\x68",
+	"\x68\x74\x74\x70\x3A\x2F\x2F\x6C\x6F\x63\x61\x6C\x68\x6F\x73\x74\x2F\x62\x65\x61\x63\x75\x6B\x61\x69\x2F\x61\x6B\x75\x6E\x2F\x67\x65\x74\x44\x61\x74\x61",
+	"\x70\x6F\x73\x74",
+	"\x6A\x73\x6F\x6E",
+	"\x75\x73\x65\x72",
+	"\x70\x61\x73\x73",
+	"\x63\x61\x74",
+	"\x62\x6C\x6F\x63\x6B",
+	"\x6E\x6F\x6D\x6F\x72\x5F\x73\x72\x74",
+	"\x74\x61\x6E\x67\x67\x61\x6C",
+	"\x61\x67\x65\x6E\x64\x61",
+	"\x73\x75\x72\x61\x74\x5F\x6D\x61\x73\x75\x6B",
+	"\x6E\x64\x5F\x6D\x61\x73\x75\x6B",
+	"\x61\x73\x61\x6C",
+	"\x74\x75\x6A\x75\x61\x6E",
+	"\x70\x65\x72\x69\x68\x61\x6C",
+	"\x6E\x61\x6D\x61\x5F\x66\x69\x6C\x65\x5F\x73\x72\x74",
+	"\x72\x65\x6D\x6F\x76\x65\x41\x74\x74\x72",
+	"\x61\x6A\x61\x78",
+	"\x69\x73\x43\x6F\x6E\x66\x69\x72\x6D\x65\x64",
+	"\x68\x72\x65\x66",
+	"\x6C\x6F\x63\x61\x74\x69\x6F\x6E",
+	"\x68\x74\x74\x70\x3A\x2F\x2F\x6C\x6F\x63\x61\x6C\x68\x6F\x73\x74\x2F\x62\x65\x61\x63\x75\x6B\x61\x69\x2F\x61\x6B\x75\x6E\x2F\x68\x61\x70\x75\x73\x2F",
+	"\x74\x68\x65\x6E",
+	"\x59\x61\x6B\x69\x6E\x20\x68\x61\x70\x75\x73\x20\x64\x61\x74\x61\x20\x69\x6E\x69\x3F",
+	"\x6B\x61\x6D\x75\x20\x61\x6B\x61\x6E\x20\x6B\x65\x68\x69\x6C\x61\x6E\x67\x61\x6E\x20\x64\x61\x74\x61\x20\x69\x6E\x69\x20\x64\x69\x20\x73\x65\x72\x76\x65\x72\x21",
+	"\x77\x61\x72\x6E\x69\x6E\x67",
+	"\x23\x33\x30\x38\x35\x64\x36",
+	"\x23\x64\x33\x33",
+	"\x48\x61\x70\x75\x73",
+	"\x66\x69\x72\x65",
+	"\x6C\x65\x6E\x67\x74\x68",
+	"\x6D\x61\x74\x63\x68",
+	"\x62\x65\x72\x68\x61\x73\x69\x6C",
+	"\x73\x75\x63\x63\x65\x73\x73",
+	"\x67\x61\x67\x61\x6C",
+	"\x65\x72\x72\x6F\x72",
+	"\x44\x61\x66\x74\x61\x72\x20\x50\x65\x6E\x67\x67\x75\x6E\x61",
+	"\x74\x65\x78\x74\x43\x6F\x6E\x74\x65\x6E\x74",
+	"\x44\x61\x66\x74\x61\x72\x20\x53\x75\x72\x61\x74\x20\x4D\x61\x73\x75\x6B",
+	"\x41\x73\x61\x6C",
+	"\x44\x61\x66\x74\x61\x72\x20\x53\x75\x72\x61\x74\x20\x4B\x65\x6C\x75\x61\x72",
+	"\x73\x75\x72\x61\x74\x5F\x6B\x65\x6C\x75\x61\x72",
+	"\x54\x75\x6A\x75\x61\x6E",
+	"\x44\x61\x66\x74\x61\x72\x20\x4E\x44\x20\x4D\x61\x73\x75\x6B",
+	"\x6E\x64\x5F\x6B\x65\x6C\x75\x61\x72",
+	"\x4F\x6B",
+];
+var tableData,
+	btnAction = document[_0xf943[1]](_0xf943[0])[0],
+	modalTitle = document[_0xf943[1]](_0xf943[2])[0],
+	judulTabel = document[_0xf943[1]](_0xf943[3])[0],
+	info = document[_0xf943[1]](_0xf943[4])[0],
+	asalTujuan = document[_0xf943[1]](_0xf943[5]),
+	form = document[_0xf943[7]](_0xf943[6]),
+	flashData = document[_0xf943[7]](_0xf943[10])[_0xf943[9]](_0xf943[8]);
 function tambah() {
-	modalTitle.innerHTML = "Tambah Data";
-	form.action = "http://localhost/beacukai/akun/tambah/" + tableData;
-	btnAction.innerHTML = "Simpan";
-	if (!tableData == "login") {
-		info.style.display = "none";
-	}
-
-	if (tableData == "login") {
-		$("#username").val("");
-		$("#password").val("");
-		$("#departemen").val("");
-	} else {
-		$("#nosurat").val("");
-		$("#tanggal").val("");
-		$("#agenda").val("");
-		$("#asaltujuan").val("");
-		$("#perihal").val("");
-		$("#filesurat").prop("required", true);
-		$("#info").val("");
-	}
+	(modalTitle[_0xf943[11]] = _0xf943[12]),
+		(form[_0xf943[13]] = _0xf943[14] + tableData),
+		(btnAction[_0xf943[11]] = _0xf943[15]),
+		_0xf943[16] == !tableData && (info[_0xf943[18]][_0xf943[17]] = _0xf943[19]),
+		_0xf943[16] == tableData
+			? ($(_0xf943[22])[_0xf943[21]](_0xf943[20]),
+			  $(_0xf943[23])[_0xf943[21]](_0xf943[20]),
+			  $(_0xf943[24])[_0xf943[21]](_0xf943[20]))
+			: ($(_0xf943[25])[_0xf943[21]](_0xf943[20]),
+			  $(_0xf943[26])[_0xf943[21]](_0xf943[20]),
+			  $(_0xf943[27])[_0xf943[21]](_0xf943[20]),
+			  $(_0xf943[28])[_0xf943[21]](_0xf943[20]),
+			  $(_0xf943[29])[_0xf943[21]](_0xf943[20]),
+			  $(_0xf943[32])[_0xf943[31]](_0xf943[30], !0),
+			  $(_0xf943[33])[_0xf943[21]](_0xf943[20]));
 }
-
-function edit(idData) {
-	modalTitle.innerHTML = "Edit Data";
-	form.action =
-		"http://localhost/beacukai/akun/edit/" + idData + "/" + tableData;
-	btnAction.innerHTML = "Rubah";
-
-	$.ajax({
-		url: "http://localhost/beacukai/akun/getData",
-		data: {
-			id: idData,
-			table: tableData,
-		},
-		method: "post",
-		dataType: "json",
-		success: function (data) {
-			if (tableData == "login") {
-				$("#username").val(data[0].user);
-				$("#password").val(data[0].pass);
-				$("#departemen").val(data[0].cat);
-			} else {
-				info.style.display = "block";
-				$("#nosurat").val(data[0].nomor_srt);
-				$("#tanggal").val(data[0].tanggal);
-				$("#agenda").val(data[0].agenda);
-				if (tableData == "surat_masuk" || tableData == "nd_masuk") {
-					$("#asaltujuan").val(data[0].asal);
-				} else {
-					$("#asaltujuan").val(data[0].tujuan);
-				}
-				$("#perihal").val(data[0].perihal);
-				$("#info").val(data[0].nama_file_srt);
-				$("#filesurat").removeAttr("required");
-			}
-		},
-	});
-	// window.onload = () => {
-	// 	const myInputPass = document.getElementById("password");
-	// 	myInputPass.onpaste = (e) => e.preventDefault();
-	// };
+function edit(_0xab34xb) {
+	(modalTitle[_0xf943[11]] = _0xf943[34]),
+		(form[_0xf943[13]] = _0xf943[35] + _0xab34xb + _0xf943[36] + tableData),
+		(btnAction[_0xf943[11]] = _0xf943[37]),
+		$[_0xf943[55]]({
+			url: _0xf943[38],
+			data: { id: _0xab34xb, table: tableData },
+			method: _0xf943[39],
+			dataType: _0xf943[40],
+			success: function (_0xab34xb) {
+				_0xf943[16] == tableData
+					? ($(_0xf943[22])[_0xf943[21]](_0xab34xb[0][_0xf943[41]]),
+					  $(_0xf943[23])[_0xf943[21]](_0xab34xb[0][_0xf943[42]]),
+					  $(_0xf943[24])[_0xf943[21]](_0xab34xb[0][_0xf943[43]]))
+					: ((info[_0xf943[18]][_0xf943[17]] = _0xf943[44]),
+					  $(_0xf943[25])[_0xf943[21]](_0xab34xb[0][_0xf943[45]]),
+					  $(_0xf943[26])[_0xf943[21]](_0xab34xb[0][_0xf943[46]]),
+					  $(_0xf943[27])[_0xf943[21]](_0xab34xb[0][_0xf943[47]]),
+					  _0xf943[48] == tableData || _0xf943[49] == tableData
+							? $(_0xf943[28])[_0xf943[21]](_0xab34xb[0][_0xf943[50]])
+							: $(_0xf943[28])[_0xf943[21]](_0xab34xb[0][_0xf943[51]]),
+					  $(_0xf943[29])[_0xf943[21]](_0xab34xb[0][_0xf943[52]]),
+					  $(_0xf943[33])[_0xf943[21]](_0xab34xb[0][_0xf943[53]]),
+					  $(_0xf943[32])[_0xf943[54]](_0xf943[30]));
+			},
+		});
 }
-
-function hapus(idData) {
-	// var a = confirm("Yakin hapus data ini?");
-	// if (a == true) {
-	// 	window.location.href =
-	// 		"http://localhost/beacukai/akun/hapus/" + idData + "/" + tableData;
-	// }
-	Swal.fire({
-		title: "Yakin hapus data ini?",
-		text: "kamu akan kehilangan data ini di server!",
-		icon: "warning",
-		showCancelButton: true,
-		confirmButtonColor: "#3085d6",
-		cancelButtonColor: "#d33",
-		confirmButtonText: "Hapus",
-	}).then((result) => {
-		if (result.isConfirmed) {
-			window.location.href =
-				"http://localhost/beacukai/akun/hapus/" + idData + "/" + tableData;
-		}
+function hapus(_0xab34xb) {
+	Swal[_0xf943[67]]({
+		title: _0xf943[61],
+		text: _0xf943[62],
+		icon: _0xf943[63],
+		showCancelButton: !0,
+		confirmButtonColor: _0xf943[64],
+		cancelButtonColor: _0xf943[65],
+		confirmButtonText: _0xf943[66],
+	})[_0xf943[60]]((_0xab34xd) => {
+		_0xab34xd[_0xf943[56]] &&
+			(window[_0xf943[58]][_0xf943[57]] =
+				_0xf943[59] + _0xab34xb + _0xf943[36] + tableData);
 	});
 }
-
-function iconAksi(data) {
-	var patt = [/berhasil/i, /gagal/i, /tidak/i]; //pattern regex
-	var resultIcon, result;
-	for (let i = 0; i < patt.length; i++) {
-		result = data.match(patt[i]); //pencocokkan
-		if (result != "") {
-			break;
-		}
-	}
-	if (result == "berhasil") {
-		resultIcon = "success";
-	} else if (result == "gagal") {
-		resultIcon = "error";
-	} else {
-		resultIcon = "info";
-	}
-	return resultIcon;
+function iconAksi(_0xab34xb) {
+	var _0xab34xd,
+		_0xab34xf = [/berhasil/i, /gagal/i, /tidak/i];
+	for (
+		let _0xab34x10 = 0;
+		_0xab34x10 < _0xab34xf[_0xf943[68]] &&
+		_0xf943[20] == (_0xab34xd = _0xab34xb[_0xf943[69]](_0xab34xf[_0xab34x10]));
+		_0xab34x10++
+	) {}
+	return _0xf943[70] == _0xab34xd
+		? _0xf943[71]
+		: _0xf943[72] == _0xab34xd
+		? _0xf943[73]
+		: _0xf943[4];
 }
-
-if (flashData) {
-	Swal.fire({
-		icon: iconAksi(flashData),
-		title: flashData,
-		confirmButtonText: `Ok`,
-	});
-}
+_0xf943[74] == judulTabel[_0xf943[75]]
+	? (tableData = _0xf943[16])
+	: ((info[_0xf943[18]][_0xf943[17]] = _0xf943[19]),
+	  _0xf943[76] == judulTabel[_0xf943[75]]
+			? ((tableData = _0xf943[48]),
+			  (asalTujuan[0][_0xf943[11]] = _0xf943[77]),
+			  (asalTujuan[1][_0xf943[11]] = _0xf943[77]))
+			: _0xf943[78] == judulTabel[_0xf943[75]]
+			? ((tableData = _0xf943[79]),
+			  (asalTujuan[0][_0xf943[11]] = _0xf943[80]),
+			  (asalTujuan[1][_0xf943[11]] = _0xf943[80]))
+			: _0xf943[81] == judulTabel[_0xf943[75]]
+			? ((tableData = _0xf943[49]),
+			  (asalTujuan[0][_0xf943[11]] = _0xf943[77]),
+			  (asalTujuan[1][_0xf943[11]] = _0xf943[77]))
+			: ((tableData = _0xf943[82]),
+			  (asalTujuan[0][_0xf943[11]] = _0xf943[80]),
+			  (asalTujuan[1][_0xf943[11]] = _0xf943[80]))),
+	flashData &&
+		Swal[_0xf943[67]]({
+			icon: iconAksi(flashData),
+			title: flashData,
+			confirmButtonText: _0xf943[83],
+		});
