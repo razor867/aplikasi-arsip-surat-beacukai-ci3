@@ -94,9 +94,9 @@ class Home extends CI_Controller
     public function showError($tipe)
     {
         if ($tipe == 'kosong') {
-            $pesan = 'Form tidak boleh kosong';
+            $pesan = 'Form tidak boleh kosong!';
         } else {
-            $pesan = 'Username dan Password salah';
+            $pesan = 'Username dan Password salah!';
         }
         $this->session->set_flashdata('infoAksi', $pesan); //tambah info Aksi
         redirect(base_url('home/login/'));
