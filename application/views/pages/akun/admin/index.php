@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="table-responsive konten-table bg-light p-5 mt-4">
+                <div class="konten-table bg-light p-5 mt-4">
                     <h4 class="text-center title-table"><?= $title_table ?></h4>
-                    <table class="table table-hover table-striped table-bordered .table-responsive data">
+                    <table class="table table-striped table-bordered dt-responsive nowrap data">
                         <thead class="bg-warning">
                             <tr>
                                 <th>Username</th>
