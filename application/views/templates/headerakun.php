@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/tambahan.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/scrolltop.css') ?>">
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css"> -->
     <link rel="stylesheet" href="<?= base_url('assets/DataTables/datatables.min.css') ?>">
 </head>
 

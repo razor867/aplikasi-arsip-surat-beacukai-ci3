@@ -30,7 +30,6 @@
 <script src="<?= base_url('assets/js/script.js') ?>"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="<?= base_url('assets/js/sidebar.js') ?>"></script>
-<!-- <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script> -->
 <script src="<?= base_url('assets/DataTables/datatables.min.js') ?>"></script>
 <script>
     $(document).ready(function() {
